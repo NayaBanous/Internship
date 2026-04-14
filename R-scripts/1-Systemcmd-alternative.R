@@ -9,7 +9,7 @@ system2("pwd")
 # Both ways work, lets try it with a command with arguments
 
 system2(command = "echo \"Hello\"")
-#Thus, using an argument to the command does not work, it appears to to " as a unexpected symbol
+#Thus, using an argument with the command does not work, it appears to see " as a unexpected symbol
 #Even when trying to escape the symbol by using \ we cannot get it to work
 #When using the LDAK software, we need to use arguments, so this is not a viable option
 
