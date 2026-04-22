@@ -1,0 +1,19 @@
+#!/bin/bash
+
+input="train"
+inputmap="/home/guest/BIT11/data/"
+output="2-Basic-statistics-output"
+outputmap="/home/guest/BIT11/Internship/Quality-control/"
+
+#The data is too big to be in our Internship map, as it cannot get uploaded to github
+#For this reason the scripts will include a cd towards the map where the ldak tool and data is available
+pwd
+cd $inputmap
+
+#Calculate the basic metrics
+./ldak6.2.linux --calc-stats $output --bfile $input
+
+#Next we move our resulting files back to our repository map Internship
+mv ./$output.* $outputmap
+
+
