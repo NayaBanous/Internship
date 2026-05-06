@@ -1,7 +1,7 @@
 #!/bin/bash
 #This script is for performing an advanced MegaPRS - with all SNPs (after QC) and a random set of individuals - part 1/2
 input="train"
-inputmap="/home/guest/BIT11/data/"
+inputmap="/home/guest/BIT11/Internship/data"
 output="1-Adv-PP-correlations-output"
 outputmap="/home/guest/BIT11/Internship/PRS/Advanced-PRS/"
 

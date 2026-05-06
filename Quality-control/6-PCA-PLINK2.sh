@@ -1,6 +1,6 @@
 #!/bin/bash
 
-inputmap="/home/guest/BIT11/data/"
+inputmap="/home/guest/BIT11/Internship/data"
 input="train"
 
 #Use the list of indiv/SNPs that pass the filters during quality control to filter the dataset

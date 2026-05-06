@@ -2,7 +2,7 @@
 # Data start with either train or test, with a suffix .fam/.bim/.pheno/.bed
 
 files = list("train.bim", "train.pheno", "train.fam", "test.bim", "test.pheno", "test.fam")
-data="/home/guest/BIT11/data/"
+data="/home/guest/BIT11/Internship/data"
 outputfile="1-Dataset-description-output.txt"
 
 #Open a connection to write output to a file with sink() and close it

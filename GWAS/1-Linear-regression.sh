@@ -1,7 +1,7 @@
 #!/bin/bash
 
 input="train"
-inputmap="/home/guest/BIT11/data/"
+inputmap="/home/guest/BIT11/Internship/data"
 output="1-Linear-output"
 outputmap="/home/guest/BIT11/Internship/GWAS/"
 
