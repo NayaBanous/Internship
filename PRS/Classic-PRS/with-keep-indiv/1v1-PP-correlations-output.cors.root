@@ -1,0 +1,7 @@
+Datafile train.bed
+Num_Samples 45000
+Num_Predictors 300000
+Num_Samples_Used 44740
+Num_Predictors_Used 64
+Num_Windows 58
+Num_Pairs 6
