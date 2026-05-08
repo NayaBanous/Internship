@@ -14,15 +14,15 @@ cd $inputmap
 
 #We want to create an extract list with all clumped predictors for all phenotypes
 #uncomment following line when running for the first time
-#cat /home/guest/BIT11/Internship/GWAS/3-Correction-clumping-output*.in > clumping-extract.txt
+cat /home/guest/BIT11/Internship/GWAS/3-Correction-clumping-output*.in > clumping-extract.txt
 
 #We want to download specifications on how to partition the genome into windows
 #uncomment following line when running for the first time
-#wget https://genetics.ghpc.au.dk/doug/berisa.txt
+wget https://genetics.ghpc.au.dk/doug/berisa.txt
 
 #We want to use 5000 random individuals from our filtered keep file
 #uncomment following line when running for the first time
-#shuf -n 5000 $keepfile > rand.5000
+shuf -n 5000 $keepfile > rand.5000
 
 #First we calculate the predictor-predictor correlations
 ./ldak6.2.linux --calc-cors $output --bfile $input --extract clumping-extract.txt --keep rand.5000 --break-points berisa.txt 
