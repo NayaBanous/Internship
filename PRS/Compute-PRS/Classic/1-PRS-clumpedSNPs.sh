@@ -1,5 +1,6 @@
 #!/bin/bash
 #This script is for computing a classic PRS, where we use all individuals (after QC) and our clumped SNPs (corrected for multiple testing and LD)
+#We filter indiv on testing QC, and clumped SNPs on training QC as our effect estimates are based on the predictors from training
 
 input="test"
 inputmap="/home/guest/BIT11/Internship/data"
@@ -7,8 +8,8 @@ output="1-PRS-clumpedSNPs-output"
 outputmap="/home/guest/BIT11/Internship/PRS/Compute-PRS/Classic/Output/"
 
 #Use the list of indiv that pass the filters during quality control to filter the dataset + clumped SNPs
-keepfile=
-extractclumped=
+keepfile="/home/guest/BIT11/Internship/PRS/Compute-PRS/Quality-control-testdata/4-Keep-indiv-test-output"
+extractclumped="/home/guest/BIT11/Internship/PRS/clumping-extract.txt"
 
 #Scorefile to be used, which contains the estimated effect sizes of the SNPs calculated by linear regression
 score1="/home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno"
