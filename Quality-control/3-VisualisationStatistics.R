@@ -1,5 +1,6 @@
-statfile="/home/guest/BIT11/Internship/Quality-control/2-Basic-statistics-output.stats"
-missingfile="/home/guest/BIT11/Internship/Quality-control/2-Basic-statistics-output.missing"
+#First we want to read in the statistics output data
+statfile="/home/guest/BIT11/Internship/Quality-control/Output/2-Basic-statistics-output.stats"
+missingfile="/home/guest/BIT11/Internship/Quality-control/Output/2-Basic-statistics-output.missing"
 
 stats_table <- read.table(statfile, sep = "\t", header=TRUE)
 missing_table <- read.table(missingfile, sep = "\t", header=TRUE)

@@ -3,7 +3,7 @@
 input="train"
 inputmap="/home/guest/BIT11/Internship/data"
 output="2-Basic-statistics-output"
-outputmap="/home/guest/BIT11/Internship/Quality-control/"
+outputmap="/home/guest/BIT11/Internship/Quality-control/Output/"
 
 #The data is too big to be in our Internship map, as it cannot get uploaded to github
 #For this reason the scripts will include a cd towards the map where the ldak tool and data is available

@@ -1,0 +1,60 @@
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+LDAK - Software for obtaining Linkage Disequilibrium Adjusted Kinships and Loads More
+Version 6 - Help pages at www.dougspeed.com
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+There are 6 pairs of arguments:
+--calc-scores 1-PRS-clumpedSNPs-output1
+--scorefile /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno1.score
+--bfile test
+--keep /home/guest/BIT11/Internship/Quality-control/4-Keep-indiv-output
+--extract /home/guest/BIT11/Internship/PRS/clumping-extract.txt
+--pheno test.pheno
+
+Error, test.pheno contains multiple phenotypes, so you must specify one using "--mpheno" or "--pheno-name"
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+LDAK - Software for obtaining Linkage Disequilibrium Adjusted Kinships and Loads More
+Version 6 - Help pages at www.dougspeed.com
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+There are 6 pairs of arguments:
+--calc-scores 1-PRS-clumpedSNPs-output2
+--scorefile /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno2.score
+--bfile test
+--keep /home/guest/BIT11/Internship/Quality-control/4-Keep-indiv-output
+--extract /home/guest/BIT11/Internship/PRS/clumping-extract.txt
+--pheno test.pheno
+
+Error, test.pheno contains multiple phenotypes, so you must specify one using "--mpheno" or "--pheno-name"
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+LDAK - Software for obtaining Linkage Disequilibrium Adjusted Kinships and Loads More
+Version 6 - Help pages at www.dougspeed.com
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+There are 6 pairs of arguments:
+--calc-scores 1-PRS-clumpedSNPs-output3
+--scorefile /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno3.score
+--bfile test
+--keep /home/guest/BIT11/Internship/Quality-control/4-Keep-indiv-output
+--extract /home/guest/BIT11/Internship/PRS/clumping-extract.txt
+--pheno test.pheno
+
+Error, test.pheno contains multiple phenotypes, so you must specify one using "--mpheno" or "--pheno-name"
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+LDAK - Software for obtaining Linkage Disequilibrium Adjusted Kinships and Loads More
+Version 6 - Help pages at www.dougspeed.com
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+There are 6 pairs of arguments:
+--calc-scores 1-PRS-clumpedSNPs-output4
+--scorefile /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno4.score
+--bfile test
+--keep /home/guest/BIT11/Internship/Quality-control/4-Keep-indiv-output
+--extract /home/guest/BIT11/Internship/PRS/clumping-extract.txt
+--pheno test.pheno
+
+Error, test.pheno contains multiple phenotypes, so you must specify one using "--mpheno" or "--pheno-name"
+

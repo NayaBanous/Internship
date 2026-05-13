@@ -15,7 +15,7 @@ extractfile="/home/guest/BIT11/Internship/Quality-control/4-Keep-SNP-output"
 kinfile="5-Kinship-matrix-output"
 axes=20
 output="5-PCA-output"
-outputmap="/home/guest/BIT11/Internship/Quality-control/"
+outputmap="/home/guest/BIT11/Internship/Quality-control/Output/"
 
 #####################################################################################################################
 

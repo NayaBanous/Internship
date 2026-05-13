@@ -1,4 +1,5 @@
 #Reading in GWAS output files, only 1-3, file 4 is NA
+#Files should be placed in the same map as this script
 
 name1="1-Linear-output."
 name2 <- c("pheno1.", "pheno2.", "pheno3.")

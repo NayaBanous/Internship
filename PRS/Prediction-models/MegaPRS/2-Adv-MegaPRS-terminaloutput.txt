@@ -1,0 +1,508 @@
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+LDAK - Software for obtaining Linkage Disequilibrium Adjusted Kinships and Loads More
+Version 6 - Help pages at www.dougspeed.com
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+There are 6 pairs of arguments:
+--mega-prs 2-Adv-MegaPRS-output1
+--summary /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno1.summaries
+--cors /home/guest/BIT11/Internship/PRS/Prediction-models/MegaPRS/Output/1-Adv-PP-correlations-output
+--check-sums NO
+--MCMC-solve YES
+--PRS-variance YES
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+Constructing a MegaPRS PRS
+
+Will consider BayesR models; change this choice using "--model", followed by "lasso-sparse", "lasso", "ridge", "bolt", "bayesr", "bayesr-shrink", "--elastic" or "--mega" (we recommend "--bayesr")
+
+Will use 4 MCMC chains, each with 50 burn-ins followed by 200 iterations (change these values using "--MCMC-chains", "--MCMC-burn" and "--MCMC-iterations")
+
+Will record effect sizes every 10th iteration (after burn-in); change the frequency using "--MCMC-step
+
+Will use the default parameter choices (saved in the file 2-Adv-MegaPRS-output1.parameters); to instead specify your own, use "--parameters"
+
+The heritability estimate must be between 0.01 and 0.8000 (change the upper bound using "--max-her")
+
+Will exclude a predictor if the difference between its allele frequency in the summary statistics and the correlations is greater than 0.2000 (use "--check-frequencies NO" to turn off this filtering, or "--max-frequency-difference" to change the threshold)
+
+Will impute summary statistics when necessary (to instead ignore the corresponding predictors, use "--impute-summaries NO")
+
+Will scale predictor-predictor correlations by 0.9500 (change this value using "--shrink")
+
+To run the parallel version of LDAK, use "--max-threads" (this will only reduce runtime for some commands)
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+Reading details for 297923 predictors from /home/guest/BIT11/Internship/PRS/Prediction-models/MegaPRS/Output/1-Adv-PP-correlations-output.cors.bim
+
+Reading summary statistics from /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno1.summaries
+Warning, Predictor rs17064653 will be ignored as it has ambiguous alleles (A and T)
+If you are confident that ambiguous predictors are correctly oriented, you can retain them by adding "--allow-ambiguous YES"
+Warning, /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno1.summaries contains summary statistics for only 297922 of the 297923 predictors
+First few stats and ns are: rs3131972 3.528 44740.0 | rs3131969 5.329 44740.0 | rs3115850 2.590 44740.0
+The maximum (average) sample size is 44740 (44739.8)
+
+Measuring the similarity between the summary statistics and the predictor-predictor correlations
+The mean difference in frequencies is 0.0030
+
+The analysis will be performed using 297923 predictors
+
+Imputing summary statistics for (up to) 1 predictors
+Imputing for Window 1 of 591
+Imputing for Window 51 of 591
+Imputing for Window 101 of 591
+Imputing for Window 151 of 591
+Imputing for Window 201 of 591
+Imputing for Window 251 of 591
+Imputing for Window 301 of 591
+Imputing for Window 351 of 591
+Imputing for Window 401 of 591
+Imputing for Window 451 of 591
+Imputing for Window 501 of 591
+Imputing for Window 551 of 591
+
+The imputation took 0.00 minutes
+
+Testing five values for the power parameter (-1, -0.75, -0.5, -0.25 and 0)
+The best-fitting value is 0.00
+
+There are 0 high-LD predictors (these will be excluded when performing pseudo cross-validation)
+
+Estimating heritability using an approximate version of SumHer
+
+Calculating taggings for Window 1 of 591
+Calculating taggings for Window 51 of 591
+Calculating taggings for Window 101 of 591
+Calculating taggings for Window 151 of 591
+Calculating taggings for Window 201 of 591
+Calculating taggings for Window 251 of 591
+Calculating taggings for Window 301 of 591
+Calculating taggings for Window 351 of 591
+Calculating taggings for Window 401 of 591
+Calculating taggings for Window 451 of 591
+Calculating taggings for Window 501 of 591
+Calculating taggings for Window 551 of 591
+
+Estimated heritability is 0.0913
+
+Warning, 12709 of the per-predictor heritabilities were negative or very small (so have been set to 0.2000 times the average value; change this threshold using "--min-her")
+
+Estimating training effect sizes for 35 models
+Estimating training effect sizes for Window 1 of 591
+Estimating training effect sizes for Window 51 of 591
+Estimating training effect sizes for Window 101 of 591
+Estimating training effect sizes for Window 151 of 591
+Estimating training effect sizes for Window 201 of 591
+Estimating training effect sizes for Window 251 of 591
+Estimating training effect sizes for Window 301 of 591
+Estimating training effect sizes for Window 351 of 591
+Estimating training effect sizes for Window 401 of 591
+Estimating training effect sizes for Window 451 of 591
+Estimating training effect sizes for Window 501 of 591
+Estimating training effect sizes for Window 551 of 591
+
+Testing the models using pseudo test summary statistics
+The estimated accuracies are saved in 2-Adv-MegaPRS-output1.cors, while the parameters corresponding to the best model (which has approximate correlation 0.13) are saved in 2-Adv-MegaPRS-output1.best
+
+Estimating final effect sizes for the best model
+Estimating final effect sizes for Window 1 of 591
+Estimating final effect sizes for Window 101 of 591
+Estimating final effect sizes for Window 201 of 591
+Estimating final effect sizes for Window 301 of 591
+Estimating final effect sizes for Window 401 of 591
+Estimating final effect sizes for Window 501 of 591
+
+Best model saved in 2-Adv-MegaPRS-output1.effects, with posterior probabilities in 2-Adv-MegaPRS-output1.probs
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+This command started at Mon May 11 17:20:37 2026 and ended at Mon May 11 17:30:56 2026
+The elapsed time was 0.17 hours
+Given the command used one thread, this means the CPU time was also 0.17 hours
+Mission completed. All your basepair are belong to us :)
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+LDAK - Software for obtaining Linkage Disequilibrium Adjusted Kinships and Loads More
+Version 6 - Help pages at www.dougspeed.com
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+There are 6 pairs of arguments:
+--mega-prs 2-Adv-MegaPRS-output2
+--summary /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno2.summaries
+--cors /home/guest/BIT11/Internship/PRS/Prediction-models/MegaPRS/Output/1-Adv-PP-correlations-output
+--check-sums NO
+--MCMC-solve YES
+--PRS-variance YES
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+Constructing a MegaPRS PRS
+
+Will consider BayesR models; change this choice using "--model", followed by "lasso-sparse", "lasso", "ridge", "bolt", "bayesr", "bayesr-shrink", "--elastic" or "--mega" (we recommend "--bayesr")
+
+Will use 4 MCMC chains, each with 50 burn-ins followed by 200 iterations (change these values using "--MCMC-chains", "--MCMC-burn" and "--MCMC-iterations")
+
+Will record effect sizes every 10th iteration (after burn-in); change the frequency using "--MCMC-step
+
+Will use the default parameter choices (saved in the file 2-Adv-MegaPRS-output2.parameters); to instead specify your own, use "--parameters"
+
+The heritability estimate must be between 0.01 and 0.8000 (change the upper bound using "--max-her")
+
+Will exclude a predictor if the difference between its allele frequency in the summary statistics and the correlations is greater than 0.2000 (use "--check-frequencies NO" to turn off this filtering, or "--max-frequency-difference" to change the threshold)
+
+Will impute summary statistics when necessary (to instead ignore the corresponding predictors, use "--impute-summaries NO")
+
+Will scale predictor-predictor correlations by 0.9500 (change this value using "--shrink")
+
+To run the parallel version of LDAK, use "--max-threads" (this will only reduce runtime for some commands)
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+Reading details for 297923 predictors from /home/guest/BIT11/Internship/PRS/Prediction-models/MegaPRS/Output/1-Adv-PP-correlations-output.cors.bim
+
+Reading summary statistics from /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno2.summaries
+Warning, Predictor rs17064653 will be ignored as it has ambiguous alleles (A and T)
+If you are confident that ambiguous predictors are correctly oriented, you can retain them by adding "--allow-ambiguous YES"
+Warning, /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno2.summaries contains summary statistics for only 297922 of the 297923 predictors
+First few stats and ns are: rs3131972 2.045 44740.0 | rs3131969 0.554 44740.0 | rs3115850 2.765 44740.0
+The maximum (average) sample size is 44740 (44739.8)
+
+Measuring the similarity between the summary statistics and the predictor-predictor correlations
+The mean difference in frequencies is 0.0030
+
+The analysis will be performed using 297923 predictors
+
+Imputing summary statistics for (up to) 1 predictors
+Imputing for Window 1 of 591
+Imputing for Window 51 of 591
+Imputing for Window 101 of 591
+Imputing for Window 151 of 591
+Imputing for Window 201 of 591
+Imputing for Window 251 of 591
+Imputing for Window 301 of 591
+Imputing for Window 351 of 591
+Imputing for Window 401 of 591
+Imputing for Window 451 of 591
+Imputing for Window 501 of 591
+Imputing for Window 551 of 591
+
+The imputation took 0.00 minutes
+
+Testing five values for the power parameter (-1, -0.75, -0.5, -0.25 and 0)
+The best-fitting value is 0.00
+
+There are 0 high-LD predictors (these will be excluded when performing pseudo cross-validation)
+
+Estimating heritability using an approximate version of SumHer
+
+Calculating taggings for Window 1 of 591
+Calculating taggings for Window 51 of 591
+Calculating taggings for Window 101 of 591
+Calculating taggings for Window 151 of 591
+Calculating taggings for Window 201 of 591
+Calculating taggings for Window 251 of 591
+Calculating taggings for Window 301 of 591
+Calculating taggings for Window 351 of 591
+Calculating taggings for Window 401 of 591
+Calculating taggings for Window 451 of 591
+Calculating taggings for Window 501 of 591
+Calculating taggings for Window 551 of 591
+
+Estimated heritability is 0.5904
+
+Warning, 12709 of the per-predictor heritabilities were negative or very small (so have been set to 0.2000 times the average value; change this threshold using "--min-her")
+
+Estimating training effect sizes for 35 models
+Estimating training effect sizes for Window 1 of 591
+Estimating training effect sizes for Window 51 of 591
+Estimating training effect sizes for Window 101 of 591
+Estimating training effect sizes for Window 151 of 591
+Estimating training effect sizes for Window 201 of 591
+Estimating training effect sizes for Window 251 of 591
+Estimating training effect sizes for Window 301 of 591
+Estimating training effect sizes for Window 351 of 591
+Estimating training effect sizes for Window 401 of 591
+Estimating training effect sizes for Window 451 of 591
+Estimating training effect sizes for Window 501 of 591
+Estimating training effect sizes for Window 551 of 591
+
+Testing the models using pseudo test summary statistics
+The estimated accuracies are saved in 2-Adv-MegaPRS-output2.cors, while the parameters corresponding to the best model (which has approximate correlation 0.42) are saved in 2-Adv-MegaPRS-output2.best
+
+Estimating final effect sizes for the best model
+Estimating final effect sizes for Window 1 of 591
+Estimating final effect sizes for Window 101 of 591
+Estimating final effect sizes for Window 201 of 591
+Estimating final effect sizes for Window 301 of 591
+Estimating final effect sizes for Window 401 of 591
+Estimating final effect sizes for Window 501 of 591
+
+Best model saved in 2-Adv-MegaPRS-output2.effects, with posterior probabilities in 2-Adv-MegaPRS-output2.probs
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+This command started at Mon May 11 17:30:56 2026 and ended at Mon May 11 17:42:05 2026
+The elapsed time was 0.18 hours
+Given the command used one thread, this means the CPU time was also 0.18 hours
+Mission completed. All your basepair are belong to us :)
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+LDAK - Software for obtaining Linkage Disequilibrium Adjusted Kinships and Loads More
+Version 6 - Help pages at www.dougspeed.com
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+There are 6 pairs of arguments:
+--mega-prs 2-Adv-MegaPRS-output3
+--summary /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno3.summaries
+--cors /home/guest/BIT11/Internship/PRS/Prediction-models/MegaPRS/Output/1-Adv-PP-correlations-output
+--check-sums NO
+--MCMC-solve YES
+--PRS-variance YES
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+Constructing a MegaPRS PRS
+
+Will consider BayesR models; change this choice using "--model", followed by "lasso-sparse", "lasso", "ridge", "bolt", "bayesr", "bayesr-shrink", "--elastic" or "--mega" (we recommend "--bayesr")
+
+Will use 4 MCMC chains, each with 50 burn-ins followed by 200 iterations (change these values using "--MCMC-chains", "--MCMC-burn" and "--MCMC-iterations")
+
+Will record effect sizes every 10th iteration (after burn-in); change the frequency using "--MCMC-step
+
+Will use the default parameter choices (saved in the file 2-Adv-MegaPRS-output3.parameters); to instead specify your own, use "--parameters"
+
+The heritability estimate must be between 0.01 and 0.8000 (change the upper bound using "--max-her")
+
+Will exclude a predictor if the difference between its allele frequency in the summary statistics and the correlations is greater than 0.2000 (use "--check-frequencies NO" to turn off this filtering, or "--max-frequency-difference" to change the threshold)
+
+Will impute summary statistics when necessary (to instead ignore the corresponding predictors, use "--impute-summaries NO")
+
+Will scale predictor-predictor correlations by 0.9500 (change this value using "--shrink")
+
+To run the parallel version of LDAK, use "--max-threads" (this will only reduce runtime for some commands)
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+Reading details for 297923 predictors from /home/guest/BIT11/Internship/PRS/Prediction-models/MegaPRS/Output/1-Adv-PP-correlations-output.cors.bim
+
+Reading summary statistics from /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno3.summaries
+Warning, Predictor rs17064653 will be ignored as it has ambiguous alleles (A and T)
+If you are confident that ambiguous predictors are correctly oriented, you can retain them by adding "--allow-ambiguous YES"
+Warning, /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno3.summaries contains summary statistics for only 297922 of the 297923 predictors
+First few stats and ns are: rs3131972 0.027 44740.0 | rs3131969 0.222 44740.0 | rs3115850 0.111 44740.0
+The maximum (average) sample size is 44740 (44739.8)
+
+Measuring the similarity between the summary statistics and the predictor-predictor correlations
+The mean difference in frequencies is 0.0030
+
+The analysis will be performed using 297923 predictors
+
+Imputing summary statistics for (up to) 1 predictors
+Imputing for Window 1 of 591
+Imputing for Window 51 of 591
+Imputing for Window 101 of 591
+Imputing for Window 151 of 591
+Imputing for Window 201 of 591
+Imputing for Window 251 of 591
+Imputing for Window 301 of 591
+Imputing for Window 351 of 591
+Imputing for Window 401 of 591
+Imputing for Window 451 of 591
+Imputing for Window 501 of 591
+Imputing for Window 551 of 591
+
+The imputation took 0.00 minutes
+
+Testing five values for the power parameter (-1, -0.75, -0.5, -0.25 and 0)
+The best-fitting value is -0.25
+
+There are 0 high-LD predictors (these will be excluded when performing pseudo cross-validation)
+
+Estimating heritability using an approximate version of SumHer
+
+Calculating taggings for Window 1 of 591
+Calculating taggings for Window 51 of 591
+Calculating taggings for Window 101 of 591
+Calculating taggings for Window 151 of 591
+Calculating taggings for Window 201 of 591
+Calculating taggings for Window 251 of 591
+Calculating taggings for Window 301 of 591
+Calculating taggings for Window 351 of 591
+Calculating taggings for Window 401 of 591
+Calculating taggings for Window 451 of 591
+Calculating taggings for Window 501 of 591
+Calculating taggings for Window 551 of 591
+
+Estimated heritability is 0.2765
+
+Warning, 5109 of the per-predictor heritabilities were negative or very small (so have been set to 0.2000 times the average value; change this threshold using "--min-her")
+
+Estimating training effect sizes for 35 models
+Estimating training effect sizes for Window 1 of 591
+Estimating training effect sizes for Window 51 of 591
+Estimating training effect sizes for Window 101 of 591
+Estimating training effect sizes for Window 151 of 591
+Estimating training effect sizes for Window 201 of 591
+Estimating training effect sizes for Window 251 of 591
+Estimating training effect sizes for Window 301 of 591
+Estimating training effect sizes for Window 351 of 591
+Estimating training effect sizes for Window 401 of 591
+Estimating training effect sizes for Window 451 of 591
+Estimating training effect sizes for Window 501 of 591
+Estimating training effect sizes for Window 551 of 591
+
+Testing the models using pseudo test summary statistics
+The estimated accuracies are saved in 2-Adv-MegaPRS-output3.cors, while the parameters corresponding to the best model (which has approximate correlation 0.23) are saved in 2-Adv-MegaPRS-output3.best
+
+Estimating final effect sizes for the best model
+Estimating final effect sizes for Window 1 of 591
+Estimating final effect sizes for Window 101 of 591
+Estimating final effect sizes for Window 201 of 591
+Estimating final effect sizes for Window 301 of 591
+Estimating final effect sizes for Window 401 of 591
+Estimating final effect sizes for Window 501 of 591
+
+Best model saved in 2-Adv-MegaPRS-output3.effects, with posterior probabilities in 2-Adv-MegaPRS-output3.probs
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+This command started at Mon May 11 17:42:05 2026 and ended at Tue May 12 10:50:25 2026
+The elapsed time was 17.14 hours
+Given the command used one thread, this means the CPU time was also 17.14 hours
+Mission completed. All your basepair are belong to us :)
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+LDAK - Software for obtaining Linkage Disequilibrium Adjusted Kinships and Loads More
+Version 6 - Help pages at www.dougspeed.com
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+There are 6 pairs of arguments:
+--mega-prs 2-Adv-MegaPRS-output4
+--summary /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno4.summaries
+--cors /home/guest/BIT11/Internship/PRS/Prediction-models/MegaPRS/Output/1-Adv-PP-correlations-output
+--check-sums NO
+--MCMC-solve YES
+--PRS-variance YES
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+Constructing a MegaPRS PRS
+
+Will consider BayesR models; change this choice using "--model", followed by "lasso-sparse", "lasso", "ridge", "bolt", "bayesr", "bayesr-shrink", "--elastic" or "--mega" (we recommend "--bayesr")
+
+Will use 4 MCMC chains, each with 50 burn-ins followed by 200 iterations (change these values using "--MCMC-chains", "--MCMC-burn" and "--MCMC-iterations")
+
+Will record effect sizes every 10th iteration (after burn-in); change the frequency using "--MCMC-step
+
+Will use the default parameter choices (saved in the file 2-Adv-MegaPRS-output4.parameters); to instead specify your own, use "--parameters"
+
+The heritability estimate must be between 0.01 and 0.8000 (change the upper bound using "--max-her")
+
+Will exclude a predictor if the difference between its allele frequency in the summary statistics and the correlations is greater than 0.2000 (use "--check-frequencies NO" to turn off this filtering, or "--max-frequency-difference" to change the threshold)
+
+Will impute summary statistics when necessary (to instead ignore the corresponding predictors, use "--impute-summaries NO")
+
+Will scale predictor-predictor correlations by 0.9500 (change this value using "--shrink")
+
+To run the parallel version of LDAK, use "--max-threads" (this will only reduce runtime for some commands)
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+Reading details for 297923 predictors from /home/guest/BIT11/Internship/PRS/Prediction-models/MegaPRS/Output/1-Adv-PP-correlations-output.cors.bim
+
+Reading summary statistics from /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno4.summaries
+Warning, Predictor rs17064653 will be ignored as it has ambiguous alleles (A and T)
+If you are confident that ambiguous predictors are correctly oriented, you can retain them by adding "--allow-ambiguous YES"
+Warning, /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno4.summaries contains summary statistics for only 297922 of the 297923 predictors
+First few stats and ns are: rs3131972 0.115 44740.0 | rs3131969 0.060 44740.0 | rs3115850 0.002 44740.0
+The maximum (average) sample size is 44740 (44739.8)
+
+Measuring the similarity between the summary statistics and the predictor-predictor correlations
+The mean difference in frequencies is 0.0030
+
+The analysis will be performed using 297923 predictors
+
+Imputing summary statistics for (up to) 1 predictors
+Imputing for Window 1 of 591
+Imputing for Window 51 of 591
+Imputing for Window 101 of 591
+Imputing for Window 151 of 591
+Imputing for Window 201 of 591
+Imputing for Window 251 of 591
+Imputing for Window 301 of 591
+Imputing for Window 351 of 591
+Imputing for Window 401 of 591
+Imputing for Window 451 of 591
+Imputing for Window 501 of 591
+Imputing for Window 551 of 591
+
+The imputation took 0.00 minutes
+
+Testing five values for the power parameter (-1, -0.75, -0.5, -0.25 and 0)
+The best-fitting value is 0.00
+
+There are 0 high-LD predictors (these will be excluded when performing pseudo cross-validation)
+
+Estimating heritability using an approximate version of SumHer
+
+Calculating taggings for Window 1 of 591
+Calculating taggings for Window 51 of 591
+Calculating taggings for Window 101 of 591
+Calculating taggings for Window 151 of 591
+Calculating taggings for Window 201 of 591
+Calculating taggings for Window 251 of 591
+Calculating taggings for Window 301 of 591
+Calculating taggings for Window 351 of 591
+Calculating taggings for Window 401 of 591
+Calculating taggings for Window 451 of 591
+Calculating taggings for Window 501 of 591
+Calculating taggings for Window 551 of 591
+
+Estimated heritability is 0.0360
+
+Warning, 12709 of the per-predictor heritabilities were negative or very small (so have been set to 0.2000 times the average value; change this threshold using "--min-her")
+
+Estimating training effect sizes for 35 models
+Estimating training effect sizes for Window 1 of 591
+Estimating training effect sizes for Window 51 of 591
+Estimating training effect sizes for Window 101 of 591
+Estimating training effect sizes for Window 151 of 591
+Estimating training effect sizes for Window 201 of 591
+Estimating training effect sizes for Window 251 of 591
+Estimating training effect sizes for Window 301 of 591
+Estimating training effect sizes for Window 351 of 591
+Estimating training effect sizes for Window 401 of 591
+Estimating training effect sizes for Window 451 of 591
+Estimating training effect sizes for Window 501 of 591
+Estimating training effect sizes for Window 551 of 591
+
+Testing the models using pseudo test summary statistics
+The estimated accuracies are saved in 2-Adv-MegaPRS-output4.cors, while the parameters corresponding to the best model (which has approximate correlation 0.02) are saved in 2-Adv-MegaPRS-output4.best
+
+Estimating final effect sizes for the best model
+Estimating final effect sizes for Window 1 of 591
+Estimating final effect sizes for Window 101 of 591
+Estimating final effect sizes for Window 201 of 591
+Estimating final effect sizes for Window 301 of 591
+Estimating final effect sizes for Window 401 of 591
+Estimating final effect sizes for Window 501 of 591
+
+Best model saved in 2-Adv-MegaPRS-output4.effects, with posterior probabilities in 2-Adv-MegaPRS-output4.probs
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+This command started at Tue May 12 10:50:25 2026 and ended at Tue May 12 11:00:05 2026
+The elapsed time was 0.16 hours
+Given the command used one thread, this means the CPU time was also 0.16 hours
+Mission completed. All your basepair are belong to us :)
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+

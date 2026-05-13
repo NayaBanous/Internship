@@ -3,7 +3,7 @@
 input="train"
 inputmap="/home/guest/BIT11/Internship/data"
 output="1-Linear-output"
-outputmap="/home/guest/BIT11/Internship/GWAS/"
+outputmap="/home/guest/BIT11/Internship/GWAS/Output/"
 
 #Use the list of indiv/SNPs that pass the filters during quality control to filter the dataset
 keepfile="/home/guest/BIT11/Internship/Quality-control/4-Keep-indiv-output"

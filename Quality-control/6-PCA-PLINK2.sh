@@ -7,7 +7,7 @@ input="train"
 keepfile="/home/guest/BIT11/Internship/Quality-control/4-Keep-indiv-output"
 extractfile="/home/guest/BIT11/Internship/Quality-control/4-Keep-SNP-output"
 
-outputmap="/home/guest/BIT11/Internship/Quality-control/"
+outputmap="/home/guest/BIT11/Internship/Quality-control/Output"
 
 
 #The data is too big to be in our Internship map, as it cannot get uploaded to github

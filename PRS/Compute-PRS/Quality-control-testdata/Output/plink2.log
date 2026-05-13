@@ -1,0 +1,39 @@
+PLINK v2.0.0-a.6.33LM 64-bit Intel (28 Feb 2026)
+Options in effect:
+  --bfile test
+  --extract /home/guest/BIT11/Internship/PRS/Compute-PRS/Quality-control-testdata/4-Keep-SNP-test-output
+  --keep /home/guest/BIT11/Internship/PRS/Compute-PRS/Quality-control-testdata/4-Keep-indiv-test-output
+  --king-cutoff 0.177
+  --memory 4000
+  --pca approx
+  --threads 4
+
+Hostname: vbox
+Working directory: /home/guest/BIT11/Internship/data
+Start time: Tue May 12 18:42:15 2026
+
+Random number seed: 1778604135
+5912 MiB RAM detected, ~3524 available; reserving 3460 MiB for main workspace.
+Using up to 4 compute threads.
+5000 samples (0 females, 0 males, 5000 ambiguous; 5000 founders) loaded from
+test.fam.
+300000 variants loaded from test.bim.
+Note: No phenotype data present.
+--extract: 298082 variants remaining.
+--keep: 4960 samples remaining.
+4960 samples (0 females, 0 males, 4960 ambiguous; 4960 founders) remaining
+after main filters.
+Calculating allele frequencies... done.
+298082 variants remaining after main filters.
+--king-cutoff pass 1/1: Scanning for rare variants... done.
+4014 variants handled by initial scan (294068 remaining).
+--king-cutoff: 298082 variants processed.
+--king-cutoff: Excluded sample IDs written to plink2.king.cutoff.out.id , and
+4960 remaining sample IDs written to plink2.king.cutoff.in.id .
+Warning: "--pca approx" is only recommended for analysis of >5000 samples.
+Computing SVD of Krylov matrix... done.
+Recovering top PCs from range approximation... done.
+--pca approx: Eigenvectors written to plink2.eigenvec , and eigenvalues written
+to plink2.eigenval .
+
+End time: Tue May 12 18:46:33 2026

@@ -1,0 +1,149 @@
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+LDAK - Software for obtaining Linkage Disequilibrium Adjusted Kinships and Loads More
+Version 6 - Help pages at www.dougspeed.com
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+There are 8 pairs of arguments:
+--elastic 1-Elastic-Predict-output
+--bfile train
+--keep /home/guest/BIT11/Internship/Quality-control/4-Keep-indiv-output
+--extract /home/guest/BIT11/Internship/Quality-control/4-Keep-SNP-output
+--pheno train.pheno
+--mpheno ALL
+--LOCO NO
+--max-threads 4
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+Constructing elastic net PRS
+
+Will consider five values for the predictor scaling (alpha = -1, -0.75, -0.5, -0.25 and 0); to instead specify the value, use "--power" (or use "--powerfile" to provide a range of values)
+
+Will use the default prior parameter choices (saved in the file 1-Elastic-Predict-output.parameters); to instead specify your own, use "--parameters"
+
+Will always include the LOCO polygenic contribution, regardless of their estimated accuracy
+
+When constructing PRS, will scan the data at most 10 times (change this using "--num-scans")
+
+All heritability estimates must be between 0.01 and 0.8000 (change the upper bound using "--max-her")
+
+Will use either three or ten random vectors for Monte Carlo operations (decided based on the number of samples); change this number using "--num-random-vectors"
+
+Consider using "--covar" and/or "--factors" to provide quantitative or categorical covariates
+
+To perform quality control of predictors use "--min-maf", "--max-maf", "--min-var" and/or "--min-obs"
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+Reading IDs for 45000 samples from train.fam
+
+Reading list of 44741 samples to keep from /home/guest/BIT11/Internship/Quality-control/4-Keep-indiv-output
+Warning, only 44740 of these are in train.fam
+
+Checking responses for 45000 samples from train.pheno
+
+Reading details for 300000 predictors from train.bim
+
+Reading list of 297924 predictors to extract from /home/guest/BIT11/Internship/Quality-control/4-Keep-SNP-output
+Warning, only 297923 of these are in train.bim
+
+Data contain 45000 samples and 300000 predictors (will be using 44740 and 297923)
+
+Reading phenotypes for 45000 samples from train.pheno
+Response 1 in train.pheno is binary, with 13411 cases and 31329 controls
+Response 4 in train.pheno is binary, with 8964 cases and 35776 controls
+
+For phenotype 1, will use 40266 training samples and 4474 test samples
+For phenotype 2, will use 40266 training samples and 4474 test samples
+For phenotype 3, will use 40266 training samples and 4474 test samples
+For phenotype 4, will use 40266 training samples and 4474 test samples
+
+Estimating per-predictor heritabilities using Randomized Haseman-Elston Regression with 3 random vectors
+
+Will divide the predictors into 20 partitions (change this using "--num-divides")
+Will exclude chunks containing a predictor with estimated variance explained greater than 0.0200 (change this using "--max-cor")
+
+Calculating traces for Chunk 1 of 1164
+Calculating traces for Chunk 201 of 1164
+Calculating traces for Chunk 401 of 1164
+Calculating traces for Chunk 601 of 1164
+Calculating traces for Chunk 801 of 1164
+Calculating traces for Chunk 1001 of 1164
+
+Phenotype 1 has best power 0.0000 and estimated heritability 0.0970 (SD 0.0077)
+Phenotype 2 has best power 0.0000 and estimated heritability 0.6357 (SD 0.0077)
+Phenotype 3 has best power -0.2500 and estimated heritability 0.2793 (SD 0.0079)
+Phenotype 4 has best power 0.0000 and estimated heritability 0.0369 (SD 0.0077)
+
+Time check: have so far spent 0.19 hours
+
+Constructing 10 PRS for each phenotype using training samples
+
+Scan 1: estimating training effect sizes for Chunk 1 of 1164
+Scan 1: estimating training effect sizes for Chunk 201 of 1164
+Scan 1: estimating training effect sizes for Chunk 401 of 1164
+Scan 1: estimating training effect sizes for Chunk 601 of 1164
+Scan 1: estimating training effect sizes for Chunk 801 of 1164
+Scan 1: estimating training effect sizes for Chunk 1001 of 1164
+Average number of iterations per chunk: 4.98
+
+Scan 2: estimating training effect sizes for Chunk 1 of 1164
+Scan 2: estimating training effect sizes for Chunk 201 of 1164
+Scan 2: estimating training effect sizes for Chunk 401 of 1164
+Scan 2: estimating training effect sizes for Chunk 601 of 1164
+Scan 2: estimating training effect sizes for Chunk 801 of 1164
+Scan 2: estimating training effect sizes for Chunk 1001 of 1164
+Average number of iterations per chunk: 3.47
+
+Finding most accurate model for each phenotype
+Phenotype 1: best model 10, heritability 0.0970, p 0.0100, f2 0.1000, mean squared error 0.9890
+Phenotype 2: best model 6, heritability 0.6357, p 0.1000, f2 0.3000, mean squared error 0.8532
+Phenotype 3: best model 9, heritability 0.2793, p 0.0100, f2 0.3000, mean squared error 0.9372
+Phenotype 4: best model 1, heritability 0.0369, p 0.0000, f2 1.0000, mean squared error 0.9985
+
+Time check: have so far spent 0.89 hours
+
+Constructing final PRS for each phenotype
+
+Scan 1: estimating final effect sizes for Chunk 1 of 1164
+Scan 1: estimating final effect sizes for Chunk 201 of 1164
+Scan 1: estimating final effect sizes for Chunk 401 of 1164
+Scan 1: estimating final effect sizes for Chunk 601 of 1164
+Scan 1: estimating final effect sizes for Chunk 801 of 1164
+Scan 1: estimating final effect sizes for Chunk 1001 of 1164
+Average number of iterations per chunk: 3.03
+
+Scan 2: estimating final effect sizes for Chunk 1 of 1164
+Scan 2: estimating final effect sizes for Chunk 201 of 1164
+Scan 2: estimating final effect sizes for Chunk 401 of 1164
+Scan 2: estimating final effect sizes for Chunk 601 of 1164
+Scan 2: estimating final effect sizes for Chunk 801 of 1164
+Scan 2: estimating final effect sizes for Chunk 1001 of 1164
+Average number of iterations per chunk: 2.11
+
+Scan 3: estimating final effect sizes for Chunk 1 of 1164
+Scan 3: estimating final effect sizes for Chunk 201 of 1164
+Scan 3: estimating final effect sizes for Chunk 401 of 1164
+Scan 3: estimating final effect sizes for Chunk 601 of 1164
+Scan 3: estimating final effect sizes for Chunk 801 of 1164
+Scan 3: estimating final effect sizes for Chunk 1001 of 1164
+Average number of iterations per chunk: 1.19
+
+Scan 4: estimating final effect sizes for Chunk 1 of 197
+Average number of iterations per chunk: 1.07
+
+Scan 5: estimating final effect sizes for Chunk 1 of 13
+Average number of iterations per chunk: 1.00
+
+Best-fitting models saved in 1-Elastic-Predict-output.phenoX.effects, with posterior probabilities in 1-Elastic-Predict-output.phenoX.probs, where X is the phenotype number
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+This command started at Tue May 12 13:17:26 2026 and ended at Tue May 12 14:18:31 2026
+The elapsed time was 1.02 hours
+Given the command used 4 threads, this means the CPU time was 4.07 hours
+
+Mission completed. All your basepair are belong to us :)
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+

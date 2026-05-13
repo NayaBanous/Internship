@@ -3,7 +3,7 @@
 input="train"
 inputmap="/home/guest/BIT11/Internship/data"
 output="3-Correction-clumping-output"
-outputmap="/home/guest/BIT11/Internship/GWAS/"
+outputmap="/home/guest/BIT11/Internship/GWAS/Output/"
 
 #pmap="/home/guest/BIT11/Internship/GWAS/1-Linear-output.pheno*.pvalues"
 pmap1="/home/guest/BIT11/Internship/GWAS/1-Linear-output.pheno"

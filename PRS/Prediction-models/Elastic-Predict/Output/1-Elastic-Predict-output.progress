@@ -1,0 +1,51 @@
+Estimating per-predictor heritabilities using Randomized Haseman-Elston Regression with 3 random vectors
+Calculating traces for Chunk 1 of 1164
+Calculating traces for Chunk 201 of 1164
+Calculating traces for Chunk 401 of 1164
+Calculating traces for Chunk 601 of 1164
+Calculating traces for Chunk 801 of 1164
+Calculating traces for Chunk 1001 of 1164
+Time check: have so far spent 0.19 hours
+Constructing 10 PRS for each phenotype using training samples
+Scan 1: estimating training effect sizes for Chunk 1 of 1164
+Scan 1: estimating training effect sizes for Chunk 201 of 1164
+Scan 1: estimating training effect sizes for Chunk 401 of 1164
+Scan 1: estimating training effect sizes for Chunk 601 of 1164
+Scan 1: estimating training effect sizes for Chunk 801 of 1164
+Scan 1: estimating training effect sizes for Chunk 1001 of 1164
+Average number of iterations per chunk: 4.98
+Scan 2: estimating training effect sizes for Chunk 1 of 1164
+Scan 2: estimating training effect sizes for Chunk 201 of 1164
+Scan 2: estimating training effect sizes for Chunk 401 of 1164
+Scan 2: estimating training effect sizes for Chunk 601 of 1164
+Scan 2: estimating training effect sizes for Chunk 801 of 1164
+Scan 2: estimating training effect sizes for Chunk 1001 of 1164
+Average number of iterations per chunk: 3.47
+Time check: have so far spent 0.89 hours
+Constructing final PRS for 4 phenotypes using all samples
+
+Scan 1: estimating final effect sizes for Chunk 1 of 1164
+Scan 1: estimating final effect sizes for Chunk 201 of 1164
+Scan 1: estimating final effect sizes for Chunk 401 of 1164
+Scan 1: estimating final effect sizes for Chunk 601 of 1164
+Scan 1: estimating final effect sizes for Chunk 801 of 1164
+Scan 1: estimating final effect sizes for Chunk 1001 of 1164
+Average number of iterations per chunk: 3.03
+Scan 2: estimating final effect sizes for Chunk 1 of 1164
+Scan 2: estimating final effect sizes for Chunk 201 of 1164
+Scan 2: estimating final effect sizes for Chunk 401 of 1164
+Scan 2: estimating final effect sizes for Chunk 601 of 1164
+Scan 2: estimating final effect sizes for Chunk 801 of 1164
+Scan 2: estimating final effect sizes for Chunk 1001 of 1164
+Average number of iterations per chunk: 2.11
+Scan 3: estimating final effect sizes for Chunk 1 of 1164
+Scan 3: estimating final effect sizes for Chunk 201 of 1164
+Scan 3: estimating final effect sizes for Chunk 401 of 1164
+Scan 3: estimating final effect sizes for Chunk 601 of 1164
+Scan 3: estimating final effect sizes for Chunk 801 of 1164
+Scan 3: estimating final effect sizes for Chunk 1001 of 1164
+Average number of iterations per chunk: 1.19
+Scan 4: estimating final effect sizes for Chunk 1 of 197
+Average number of iterations per chunk: 1.07
+Scan 5: estimating final effect sizes for Chunk 1 of 13
+Average number of iterations per chunk: 1.00
