@@ -4,6 +4,5 @@ data/*fam
 data/*pheno
 data/ldak*
 
-PRS/Advanced-PRS/*.effects
-PRS/Advanced-PRS/*.cors.bin
-
+#PRS/Prediction-models/MegaPRS/Output/*.effects
+#PRS/Prediction-models/MegaPRS/Output/*.cors.bin
