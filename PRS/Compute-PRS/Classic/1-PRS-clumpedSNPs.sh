@@ -9,7 +9,8 @@ outputmap="/home/guest/BIT11/Internship/PRS/Compute-PRS/Classic/Output/"
 
 #Use the list of indiv that pass the filters during quality control to filter the dataset + clumped SNPs
 keepfile="/home/guest/BIT11/Internship/PRS/Compute-PRS/Quality-control-testdata/4-Keep-indiv-test-output"
-extractclumped="/home/guest/BIT11/Internship/PRS/clumping-extract.txt"
+clumpfile1="/home/guest/BIT11/Internship/GWAS/Output/3-Correction-clumping-output"
+clumpfile2=".in"
 
 #Scorefile to be used, which contains the estimated effect sizes of the SNPs calculated by linear regression
 score1="/home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno"
@@ -24,7 +25,8 @@ cd $inputmap
 for n in 1 2 3 4;
 do
     scorefile="$score1""$n""$score2"
-    ./ldak6.2.linux --calc-scores $output$n --scorefile $scorefile --bfile $input --keep $keepfile --extract $extractclumped
+    clumpfile="$clumpfile1""$n""$clumpfile2"
+    ./ldak6.2.linux --calc-scores $output$n --scorefile $scorefile --bfile $input --keep $keepfile --extract $clumpfile
 done
 
 mv $output* $outputmap

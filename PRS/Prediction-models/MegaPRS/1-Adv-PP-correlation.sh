@@ -8,10 +8,10 @@ outputmap="/home/guest/BIT11/Internship/PRS/Prediction-models/MegaPRS/Output/"
 #Use the list of indiv that pass the filters during quality control to filter the dataset
 extractfile="/home/guest/BIT11/Internship/Quality-control/4-Keep-SNP-output"
 
-#Use the same list of random individuals used in the classic PRS
+#Use a list of random individuals, see README.md
 randomkeep="/home/guest/BIT11/Internship/PRS/rand.5000"
 
-#We want to download specifications on how to partition the genome into windows --> use same one as used in classic PRS
+#We want to download specifications on how to partition the genome into windows --> see README.md
 #Command: wget https://genetics.ghpc.au.dk/doug/berisa.txt
 berisa="/home/guest/BIT11/Internship/PRS/berisa.txt"
 

@@ -8,7 +8,7 @@ There are 5 pairs of arguments:
 --scorefile /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno1.score
 --bfile test
 --keep /home/guest/BIT11/Internship/PRS/Compute-PRS/Quality-control-testdata/4-Keep-indiv-test-output
---extract /home/guest/BIT11/Internship/PRS/clumping-extract.txt
+--extract /home/guest/BIT11/Internship/GWAS/Output/3-Correction-clumping-output1.in
 
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
@@ -31,21 +31,20 @@ Warning, only 4960 of these are in test.fam
 
 Reading details for 300000 predictors from test.bim
 
-Reading list of 66 predictors to extract from /home/guest/BIT11/Internship/PRS/clumping-extract.txt
-Warning, only 64 of these are in test.bim
+Reading list of 2 predictors to extract from /home/guest/BIT11/Internship/GWAS/Output/3-Correction-clumping-output1.in
 
-Data contain 5000 samples and 300000 predictors (will be using 4960 and 64)
+Data contain 5000 samples and 300000 predictors (will be using 4960 and 2)
 
 Reading details for 297923 predictors from /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno1.score
-Warning, only 64 of these are in the data
+Warning, only 2 of these are in the data
 
-Calculating scores for Chunk 1 of 19
+Calculating scores for Chunk 1 of 2
 
 Profiles saved in 1-PRS-clumpedSNPs-output1.profile
 
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
-This command started at Wed May 13 13:07:13 2026 and ended at Wed May 13 13:07:17 2026
+This command started at Mon May 18 15:40:35 2026 and ended at Mon May 18 15:40:40 2026
 The elapsed time was 0.00 hours
 Given the command used one thread, this means the CPU time was also 0.00 hours
 Mission completed. All your basepair are belong to us :)
@@ -62,7 +61,7 @@ There are 5 pairs of arguments:
 --scorefile /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno2.score
 --bfile test
 --keep /home/guest/BIT11/Internship/PRS/Compute-PRS/Quality-control-testdata/4-Keep-indiv-test-output
---extract /home/guest/BIT11/Internship/PRS/clumping-extract.txt
+--extract /home/guest/BIT11/Internship/GWAS/Output/3-Correction-clumping-output2.in
 
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
@@ -85,21 +84,20 @@ Warning, only 4960 of these are in test.fam
 
 Reading details for 300000 predictors from test.bim
 
-Reading list of 66 predictors to extract from /home/guest/BIT11/Internship/PRS/clumping-extract.txt
-Warning, only 64 of these are in test.bim
+Reading list of 37 predictors to extract from /home/guest/BIT11/Internship/GWAS/Output/3-Correction-clumping-output2.in
 
-Data contain 5000 samples and 300000 predictors (will be using 4960 and 64)
+Data contain 5000 samples and 300000 predictors (will be using 4960 and 37)
 
 Reading details for 297923 predictors from /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno2.score
-Warning, only 64 of these are in the data
+Warning, only 37 of these are in the data
 
-Calculating scores for Chunk 1 of 19
+Calculating scores for Chunk 1 of 17
 
 Profiles saved in 1-PRS-clumpedSNPs-output2.profile
 
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
-This command started at Wed May 13 13:07:17 2026 and ended at Wed May 13 13:07:20 2026
+This command started at Mon May 18 15:40:40 2026 and ended at Mon May 18 15:40:46 2026
 The elapsed time was 0.00 hours
 Given the command used one thread, this means the CPU time was also 0.00 hours
 Mission completed. All your basepair are belong to us :)
@@ -116,7 +114,7 @@ There are 5 pairs of arguments:
 --scorefile /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno3.score
 --bfile test
 --keep /home/guest/BIT11/Internship/PRS/Compute-PRS/Quality-control-testdata/4-Keep-indiv-test-output
---extract /home/guest/BIT11/Internship/PRS/clumping-extract.txt
+--extract /home/guest/BIT11/Internship/GWAS/Output/3-Correction-clumping-output3.in
 
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
@@ -139,21 +137,20 @@ Warning, only 4960 of these are in test.fam
 
 Reading details for 300000 predictors from test.bim
 
-Reading list of 66 predictors to extract from /home/guest/BIT11/Internship/PRS/clumping-extract.txt
-Warning, only 64 of these are in test.bim
+Reading list of 27 predictors to extract from /home/guest/BIT11/Internship/GWAS/Output/3-Correction-clumping-output3.in
 
-Data contain 5000 samples and 300000 predictors (will be using 4960 and 64)
+Data contain 5000 samples and 300000 predictors (will be using 4960 and 27)
 
 Reading details for 297923 predictors from /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno3.score
-Warning, only 64 of these are in the data
+Warning, only 27 of these are in the data
 
-Calculating scores for Chunk 1 of 19
+Calculating scores for Chunk 1 of 12
 
 Profiles saved in 1-PRS-clumpedSNPs-output3.profile
 
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
-This command started at Wed May 13 13:07:20 2026 and ended at Wed May 13 13:07:23 2026
+This command started at Mon May 18 15:40:46 2026 and ended at Mon May 18 15:40:51 2026
 The elapsed time was 0.00 hours
 Given the command used one thread, this means the CPU time was also 0.00 hours
 Mission completed. All your basepair are belong to us :)
@@ -170,47 +167,7 @@ There are 5 pairs of arguments:
 --scorefile /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno4.score
 --bfile test
 --keep /home/guest/BIT11/Internship/PRS/Compute-PRS/Quality-control-testdata/4-Keep-indiv-test-output
---extract /home/guest/BIT11/Internship/PRS/clumping-extract.txt
+--extract /home/guest/BIT11/Internship/GWAS/Output/3-Correction-clumping-output4.in
 
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-
-Calculating scores for 7 profiles
-
-Please note that /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno4.score is assumed to contains raw effect sizes (e.g., those generated by "--calc-blups", "--linear", "--ridge", "--bolt", "--bayesr", "--elastic", "--mega-prs" or "--calc-pca-loads"); if it instead contains standardized effect sizes (e.g., those from "--calc-posts"), you should use "--power -1"
-
-If you add "--pheno" (or "--summary"), LDAK will compute the correlation between scores and the phenotype
-
-If you require counts (how many predictors contribute to each profile) add "--save-counts YES"
-
-To run the parallel version of LDAK, use "--max-threads" (this will only reduce runtime for some commands)
-
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-
-Reading IDs for 5000 samples from test.fam
-
-Reading list of 4961 samples to keep from /home/guest/BIT11/Internship/PRS/Compute-PRS/Quality-control-testdata/4-Keep-indiv-test-output
-Warning, only 4960 of these are in test.fam
-
-Reading details for 300000 predictors from test.bim
-
-Reading list of 66 predictors to extract from /home/guest/BIT11/Internship/PRS/clumping-extract.txt
-Warning, only 64 of these are in test.bim
-
-Data contain 5000 samples and 300000 predictors (will be using 4960 and 64)
-
-Reading details for 297923 predictors from /home/guest/BIT11/Internship/GWAS/Output/1-Linear-output.pheno4.score
-Warning, only 64 of these are in the data
-
-Calculating scores for Chunk 1 of 19
-
-Profiles saved in 1-PRS-clumpedSNPs-output4.profile
-
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-
-This command started at Wed May 13 13:07:23 2026 and ended at Wed May 13 13:07:26 2026
-The elapsed time was 0.00 hours
-Given the command used one thread, this means the CPU time was also 0.00 hours
-Mission completed. All your basepair are belong to us :)
-
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+Error reading extract file /home/guest/BIT11/Internship/GWAS/Output/3-Correction-clumping-output4.in; check file exists and is not empty
 
