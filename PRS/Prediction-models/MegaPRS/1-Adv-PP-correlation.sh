@@ -9,11 +9,11 @@ outputmap="/home/guest/BIT11/Internship/PRS/Prediction-models/MegaPRS/Output/"
 extractfile="/home/guest/BIT11/Internship/Quality-control/4-Keep-SNP-output"
 
 #Use a list of random individuals, see README.md
-randomkeep="/home/guest/BIT11/Internship/PRS/rand.5000"
+randomkeep="/home/guest/BIT11/Internship/PRS/Prediction-models/MegaPRS/rand.5000"
 
 #We want to download specifications on how to partition the genome into windows --> see README.md
 #Command: wget https://genetics.ghpc.au.dk/doug/berisa.txt
-berisa="/home/guest/BIT11/Internship/PRS/berisa.txt"
+berisa="/home/guest/BIT11/Internship/PRS/Prediction-models/MegaPRS/berisa.txt"
 
 #The data is too big to be in our Internship map, as it cannot get uploaded to github
 #For this reason the scripts will include a cd towards the map where the ldak tool and data is available
