@@ -21,11 +21,11 @@ pheno <- pheno[pheno$FID==trait1$ID1,]
 lin2height <- lm(pheno$Height~trait2$Profile_7)
 summary(lin2height)
 
-#lin2bmi <- lm(pheno$BMI~trait2$Profile_7)
-#summary(lin2bmi)
+lin2bmi <- lm(pheno$BMI~trait2$Profile_7)
+summary(lin2bmi)
 
-#lin3height <- lm(pheno$Height~trait3$Profile_7)
-#summary(lin3height)
+lin3height <- lm(pheno$Height~trait3$Profile_7)
+summary(lin3height)
 
 lin3bmi <- lm(pheno$BMI~trait3$Profile_7)
 summary(lin3bmi)
@@ -55,19 +55,49 @@ abline(a = 0, b = 1, lty = 2, col = "red")
 plot(trait2$Profile_7, pheno$Height,col="blue", abline(lin2height, col="red"), cex=0.6,
      xlab="PRS", ylab="Height", main="PRS-Height linear regression")
 coefficient <- round(coef(lin2height),2)
-equation <- paste0("y = ",coefficient[1], " + ", coefficient[2], "x")
+equation <- paste0("y = ",coefficient[1], " + ", coefficient[2], "x\nR² = 0.04984")
 text(x=0.8,y=3.2,labels=equation)
 abline(v=0)
 
+##Making strata based on the percentiles
+quant <- quantile(trait2$Profile_7, c(0.2, 0.4, 0.6, 0.8))
+trait2$Percentile[trait2$Profile_7 <= quant[1]] <- "0-20"
+trait2$Percentile[quant[1]<trait2$Profile_7 & trait2$Profile_7<= quant[2]] <- "21-40"
+trait2$Percentile[quant[2]<trait2$Profile_7 & trait2$Profile_7<= quant[3]] <-"41-60"
+trait2$Percentile[quant[3]<trait2$Profile_7 & trait2$Profile_7<= quant[4]] <-"61-80"
+trait2$Percentile[quant[4]<trait2$Profile_7] <- "81-100"
 
-###############################################
+library(ggplot2)
+df <- data.frame(trait2$Profile_7, pheno$Height, trait2$Percentile)
+ggplot(df, aes(x= trait2$Percentile, y= pheno$Height)) +
+  geom_boxplot(color="darkblue", fill="lightblue") +
+  labs(y="Height", x="PRS percentile", title = "Height - PRS percentiles boxplot") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+
+
 #Bmi
 plot(trait3$Profile_7, pheno$BMI,col="blue", abline(lin3bmi, col="red"), cex=0.6,
      xlab="PRS", ylab="BMI", main="PRS-BMI linear regression")
 coefficient <- round(coef(lin3bmi),2)
-equation <- paste0("y = ",coefficient[1], " + ", coefficient[2], "x")
+equation <- paste0("y = ",coefficient[1], " + ", coefficient[2], "x\nR² = 0.02091")
 text(x=0.5,y=3.6,labels=equation)
 abline(v=0)
+
+##Making strata based on the percentiles
+quant <- quantile(trait3$Profile_7, c(0.2, 0.4, 0.6, 0.8))
+trait3$Percentile[trait3$Profile_7 <= quant[1]] <- "0-20"
+trait3$Percentile[quant[1]<trait3$Profile_7 & trait3$Profile_7<= quant[2]] <- "21-40"
+trait3$Percentile[quant[2]<trait3$Profile_7 & trait3$Profile_7<= quant[3]] <-"41-60"
+trait3$Percentile[quant[3]<trait3$Profile_7 & trait3$Profile_7<= quant[4]] <-"61-80"
+trait3$Percentile[quant[4]<trait3$Profile_7] <- "81-100"
+
+df <- data.frame(trait3$Profile_7, pheno$BMI, trait3$Percentile)
+ggplot(df, aes(x= trait3$Percentile, y= pheno$BMI)) +
+  geom_boxplot(color="darkblue", fill="lightblue") +
+  labs(y="BMI", x="PRS percentile", title = "BMI - PRS percentiles boxplot") +
+  theme(plot.title = element_text(hjust = 0.5))
+
 
 ################################################################################
 #Plotting of regression analysis: binary 
