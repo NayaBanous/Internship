@@ -1,13 +1,13 @@
-trait1 <- read.table("/home/guest/BIT11/Internship/PRS/Compute-PRS/Advanced/Summary-statistics-MegaPRS/Output/1-PRS-sumstats-output1.profile", header = TRUE)
-trait2 <- read.table("/home/guest/BIT11/Internship/PRS/Compute-PRS/Advanced/Summary-statistics-MegaPRS/Output/1-PRS-sumstats-output2.profile", header = TRUE)
-trait3 <- read.table("/home/guest/BIT11/Internship/PRS/Compute-PRS/Advanced/Summary-statistics-MegaPRS/Output/1-PRS-sumstats-output3.profile", header = TRUE)
-trait4 <- read.table("/home/guest/BIT11/Internship/PRS/Compute-PRS/Advanced/Summary-statistics-MegaPRS/Output/1-PRS-sumstats-output4.profile", header = TRUE)
+trait1 <- read.table("/home/guest/BIT11/Internship/PRS/Compute-PRS/Advanced/Individual-level-ElasticPredict/Output/1-PRS-indivlevel-output1.profile", header = TRUE)
+trait2 <- read.table("/home/guest/BIT11/Internship/PRS/Compute-PRS/Advanced/Individual-level-ElasticPredict/Output/1-PRS-indivlevel-output2.profile", header = TRUE)
+trait3 <- read.table("/home/guest/BIT11/Internship/PRS/Compute-PRS/Advanced/Individual-level-ElasticPredict/Output/1-PRS-indivlevel-output3.profile", header = TRUE)
+trait4 <- read.table("/home/guest/BIT11/Internship/PRS/Compute-PRS/Advanced/Individual-level-ElasticPredict/Output/1-PRS-indivlevel-output4.profile", header = TRUE)
 
 pheno <- read.table("/home/guest/BIT11/Internship/data/test.pheno", header = TRUE)
 #Filtering the individuals
 pheno <- pheno[pheno$FID==trait1$ID1,]
 
-#As we only need one column from the .effects files, we will create data.frames
+#As we only need one column from the .profile files, we will create data.frames
 trait1 <- data.frame(trait1$Profile_1,  pheno$Obesity)
 trait2 <- data.frame(trait2$Profile_1,  pheno$Height)
 trait3 <- data.frame(trait3$Profile_1,  pheno$BMI)
@@ -43,7 +43,7 @@ summary(lm(trait2$pheno.Height~trait3$trait3.Profile_1))
 roctest <- roc(response=trait4$pheno.Depression, predictor=trait1$trait1.Profile_1)
 plot(roctest, print.auc=TRUE)
 
-roctest <- roc(response=trait1$pheno.Obesity, predictor=trait4$trait4.Profile_1)
+roctest <- roc(response=trait4$pheno.Depression, predictor=trait1$trait1.Profile_1)
 plot(roctest, print.auc=TRUE)
 ##################################################################################
 #Visualisation
@@ -51,7 +51,7 @@ plot(roctest, print.auc=TRUE)
 plot(trait2$trait2.Profile_1, trait2$pheno.Height,col="blue", abline(lin2height, col="red"), cex=0.6,
      xlab="PRS", ylab="Height", main="PRS-Height linear regression")
 coefficient <- round(coef(lin2height),2)
-equation <- paste0("y = ",coefficient[1], " + ", coefficient[2], "x\nR² = 0.2046")
+equation <- paste0("y = ",coefficient[1], " + ", coefficient[2], "x\nR² = 0.2174")
 text(x=1.5,y=3.2,labels=equation)
 abline(v=0)
 
@@ -68,14 +68,14 @@ ggplot(trait2, aes(Percentile, pheno.Height)) +
   geom_boxplot(color="darkblue", fill="lightblue") +
   labs(y="Height", x="PRS percentile", title = "Height - PRS percentiles boxplot")  + 
   theme(plot.title = element_text(hjust = 0.5))
-  
+
 
 #Bmi
 plot(trait3$trait3.Profile_1, trait3$pheno.BMI,col="blue", abline(lin3bmi, col="red"), cex=0.6,
      xlab="PRS", ylab="BMI", main="PRS-BMI linear regression")
 coefficient <- round(coef(lin3bmi),2)
-equation <- paste0("y = ",coefficient[1], " + ", coefficient[2], "x\nR² = 0.05469")
-text(x=0.8,y=3.6,labels=equation)
+equation <- paste0("y = ",coefficient[1], " + ", coefficient[2], "x\nR² = 0.05439")
+text(x=0.7,y=-3,labels=equation)
 abline(v=0)
 
 ##Making strata based on the percentiles
@@ -94,7 +94,7 @@ ggplot(trait3, aes(Percentile, pheno.BMI)) +
 #Obesity
 boxplot(trait1$trait1.Profile_1~trait1$pheno.Obesity, xlab="Obesity", ylab="PRS", main="PRS-Obesity boxplot", col=c("violet", "darkblue"), names=c("Normal", "Obese"))
 ttest <- t.test(trait1$trait1.Profile_1~trait1$pheno.Obesity)
-text(x=1.5, y=0.3, labels="p-value = 2.497e-11")
+text(x=1.5, y=0.1, labels="p-value = 9.272e-09")
 
 library(ggplot2)
 df <- data.frame(trait1$trait1.Profile_1, trait1$pheno.Obesity)
@@ -106,7 +106,7 @@ ggplot(df, aes(x=trait1$trait1.Profile_1, colour=factor(trait1$pheno.Obesity))) 
 #Depression
 boxplot(trait4$trait4.Profile_1~trait4$pheno.Depression, xlab="Depression", ylab="PRS", main="PRS-Depression boxplot", col=c("violet", "darkblue"), names=c("Normal", "Depressed"))
 ttest2 <- t.test(trait4$trait4.Profile_1~trait4$pheno.Depression)
-text(x=1.5, y=0.1, labels="p-value = 0.1708")
+text(x=1.5, y=0.04, labels="p-value = 0.1908")
 
 library(ggplot2)
 df2 <- data.frame(trait4$trait4.Profile_1, trait4$pheno.Depression)

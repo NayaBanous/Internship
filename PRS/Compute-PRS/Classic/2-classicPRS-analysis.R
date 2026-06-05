@@ -38,6 +38,8 @@ rocobesity <- roc(response=pheno$Obesity, predictor=trait1$Profile_7)
 plot(rocobesity, print.auc=TRUE, col="blue", main="ROC curve - trait 1 as obesity")
 abline(a = 0, b = 1, lty = 2, col = "red") 
 
+exp(coef(log1obesity))
+
 #log1depression <- glm(pheno$Depression~trait1$Profile_7, family=binomial)
 #summary(log1depression)
 #rocdepression <- roc(response=pheno$Depression, predictor=trait1$Profile_7)
