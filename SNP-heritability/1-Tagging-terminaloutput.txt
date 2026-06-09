@@ -1,0 +1,58 @@
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+LDAK - Software for obtaining Linkage Disequilibrium Adjusted Kinships and Loads More
+Version 6 - Help pages at www.dougspeed.com
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+There are 5 pairs of arguments:
+--calc-tagging 1-Tagging-output
+--bfile train
+--power -0.25
+--keep /home/guest/BIT11/Internship/PRS/Prediction-models/MegaPRS/rand.5000
+--extract /home/guest/BIT11/Internship/Quality-control/4-Keep-SNP-output
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+Calculating a tagging file
+
+Will calculate correlations between pairs of predictors within 1000.00kb (change the window size using "--window-cm" or "--window-kb")
+
+If you already know the subset of predictors you plan to use with "--sum-hers" or "--sum-cors", you can use "--regression-predictors" (this will reduce the size of the tagging file and save you having to compute the regression taggings separately)
+
+When using "--sum-hers" or "--sum-cors", heritability estimates will be computed across all predictors; to instead restrict to a subset of predictors use "--heritability-predictors"
+
+To run the parallel version of LDAK, use "--max-threads" (this will only reduce runtime for some commands)
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+Reading IDs for 45000 samples from train.fam
+
+Reading list of 5000 samples to keep from /home/guest/BIT11/Internship/PRS/Prediction-models/MegaPRS/rand.5000
+
+Reading details for 300000 predictors from train.bim
+
+Reading list of 297924 predictors to extract from /home/guest/BIT11/Internship/Quality-control/4-Keep-SNP-output
+Warning, only 297923 of these are in train.bim
+
+Data contain 45000 samples and 300000 predictors (will be using 5000 and 297923)
+
+The bit-size will be set to 121 (you can change this using "--bit-size")
+
+Calculating tagging for Chunk 1 of 2463
+Calculating tagging for Chunk 401 of 2463
+Calculating tagging for Chunk 801 of 2463
+Calculating tagging for Chunk 1201 of 2463
+Calculating tagging for Chunk 1601 of 2463
+Calculating tagging for Chunk 2001 of 2463
+Calculating tagging for Chunk 2401 of 2463
+
+Taggings saved in 1-Tagging-output.tagging, with heritability matrix in 1-Tagging-output.matrix
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+This command started at Tue Jun  9 15:32:19 2026 and ended at Tue Jun  9 15:36:11 2026
+The elapsed time was 0.06 hours
+Given the command used one thread, this means the CPU time was also 0.06 hours
+Mission completed. All your basepair are belong to us :)
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
