@@ -134,3 +134,37 @@ A keep- and extract-file refer to the files created in 3-VisualisationStatistics
 >output:
     - .profile
     - .progress
+
+### SNP-heritability
+1-Tagging.sh
+>input: 
+    - PLINK1 binary dataset
+    - keepfile
+    - extractfile
+>output:
+    - .matrix
+    - .tagging
+    - .progress
+
+3-Sumhers.sh
+>input: 
+    - .tagging
+    - .matrix
+    - .summaries
+>output:
+    - .cats
+    - .cross
+    - .enrich
+    - .extra
+    - .hers
+    - .ind.hers
+    - .ind.hers.positive
+    - .labels
+    - .overlap
+    - .progress
+    - .share
+    - .taus
+    - (.cats.liab) --> only binary traits
+    - (.factor) --> only binary traits
+    - (.hers.liab) --> only binary traits
+   
