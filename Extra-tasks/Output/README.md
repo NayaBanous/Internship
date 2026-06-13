@@ -1,0 +1,2 @@
+This map appears to be empty, but it can be used by the "Calc-scores.sh" script to generate PRSs for all traits using three different methods. 
+We currently left it empty, as it would be unnecessary to repeat the result files that are currently located in the Output maps under PRS/Compute-PRS/
