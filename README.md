@@ -16,6 +16,7 @@ A keep- and extract-file refer to the files created in 3-VisualisationStatistics
 2-CalculateStatistics.sh
 >input: 
     - PLINK1 binary dataset
+|
 >output: 
     - .missing
     - .progress
@@ -26,6 +27,7 @@ A keep- and extract-file refer to the files created in 3-VisualisationStatistics
     - PLINK1 binary dataset
     - keepfile
     - extractfile
+|
 >output:
     - plink2.eigenval
     - plink2.eigenvec
@@ -40,6 +42,7 @@ A keep- and extract-file refer to the files created in 3-VisualisationStatistics
     - keepfile
     - extractfile
     - .pheno
+|
 >output:
     - phenoX.assoc
     - phenoX.coeff
@@ -54,6 +57,7 @@ A keep- and extract-file refer to the files created in 3-VisualisationStatistics
     - keepfile
     - extractfile
     - .pvalues --> from 1-Linear-regression.sh
+|
 >output:
     - .in
     - .out
@@ -67,6 +71,7 @@ A keep- and extract-file refer to the files created in 3-VisualisationStatistics
     - extractfile
     - 5000 randomized individuals from keepfile
     - genome partitioning instructions
+|
 >output:
     - .cors.bim
     - .cors.bin
@@ -78,6 +83,7 @@ A keep- and extract-file refer to the files created in 3-VisualisationStatistics
 >input: 
     - .summaries --> from 1-Linear-regression.sh
     - .cors.x files --> from 1-Adv-PP-correlation.sh
+|
 >output:
     - .best
     - .cors
@@ -94,6 +100,7 @@ A keep- and extract-file refer to the files created in 3-VisualisationStatistics
     - keepfile
     - extractfile
     - .pheno
+|
 >output:
     - .hers
     - .parameters
@@ -111,6 +118,7 @@ A keep- and extract-file refer to the files created in 3-VisualisationStatistics
     - keepfile
     - .in --> from 3-Correction-clumping.sh
     - .score --> from 1-Linear-regression.sh
+|
 >output:
     - .profile
     - .progress
@@ -121,6 +129,7 @@ A keep- and extract-file refer to the files created in 3-VisualisationStatistics
     - keepfile
     - extractfile
     - .effects --> from 2-Adv-MegaPRS.sh
+|
 >output:
     - .profile
     - .progress
@@ -131,6 +140,7 @@ A keep- and extract-file refer to the files created in 3-VisualisationStatistics
     - keepfile
     - extractfile
     - .effects --> from 1-Elastic-Predict.sh
+|
 >output:
     - .profile
     - .progress
@@ -141,6 +151,7 @@ A keep- and extract-file refer to the files created in 3-VisualisationStatistics
     - PLINK1 binary dataset
     - keepfile
     - extractfile
+|
 >output:
     - .matrix
     - .tagging
@@ -151,6 +162,7 @@ A keep- and extract-file refer to the files created in 3-VisualisationStatistics
     - .tagging
     - .matrix
     - .summaries
+|
 >output:
     - .cats
     - .cross
@@ -177,6 +189,7 @@ Calc-scores.sh
     - .in
     - .score
     - .effects
+|
 >output:
     - .profile
     - .progress
