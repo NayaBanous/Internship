@@ -168,3 +168,15 @@ A keep- and extract-file refer to the files created in 3-VisualisationStatistics
     - (.factor) --> only binary traits
     - (.hers.liab) --> only binary traits
    
+### Extra-tasks
+Calc-scores.sh
+>input: 
+    - PLINK1 binary dataset
+    - keepfile
+    - extractfile
+    - .in
+    - .score
+    - .effects
+>output:
+    - .profile
+    - .progress
